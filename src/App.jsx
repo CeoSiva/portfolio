@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import { inView } from "framer-motion"
 import Bg1 from './assets/4K_3.webm';
 import CEO from './assets/Images/MyImg.svg'
 import figma from './assets/Images/tools/figma.png'
@@ -44,14 +45,14 @@ import Discord from './components/social/Discord'
 
 
 function App() {
-  const [Load,setLoad] = useState(false);
+  const [Load,setLoad] = useState(true);
 
   useEffect(() => {
-    setLoad(true);
-    setTimeout(() => {
+    window.onload = () => {
       setLoad(false);
-    }, 2000);
+    };
   }, []);
+
   return (
 
     <div className='w-full h-full'>
@@ -309,7 +310,7 @@ function App() {
                           <time class="font-caveat font-medium text-indigo-500">Present</time>
                       </div>
                       <div class="text-slate-200">Viswa digital technology. Chennai</div>
-                      <div class="text-slate-200">(July 2018 - October 2020)</div>
+                      <div class="text-slate-200">(July 2023 - October 2023)</div>
                   </div>
               </div>
           </div>
